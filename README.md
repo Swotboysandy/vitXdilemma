@@ -14,6 +14,18 @@ It's basically a fancy flashcard app with way too many animations because CSS is
 
 ---
 
+## 🔴 Live Demo
+
+Check out the live app here: **[https://vit-xdilemma.vercel.app/](https://vit-xdilemma.vercel.app/)**
+
+---
+
+## 👋 Note
+
+I built this project for myself to actually get some studying done (ironic, I know). But if this helps you in any way or if you just like the project, **please Star this repo!** ⭐
+
+---
+
 ## 🎯 Features (that you'll use once and forget)
 
 - **250+ Quiz Questions** — Because rote learning is still a thing
