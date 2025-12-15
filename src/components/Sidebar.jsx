@@ -35,15 +35,15 @@ const Sidebar = () => {
         >
             <div className="sidebar-header">
                 <div className="logo">
-                    <span className="logo-text">S2 Study Hub</span>
+                    <span className="logo-text">Exam Panic Mode</span>
                 </div>
             </div>
 
             <div className="user-info">
-                <div className="avatar">S2</div>
+                <div className="avatar">😰</div>
                 <div className="user-details">
-                    <span className="user-name">S2 Student</span>
-                    <span className="user-id">VIT MCA</span>
+                    <span className="user-name">Last Minute Hero</span>
+                    <span className="user-id">Professional Procrastinator</span>
                 </div>
             </div>
 
