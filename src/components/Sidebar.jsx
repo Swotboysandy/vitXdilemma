@@ -38,7 +38,7 @@ const Sidebar = () => {
                 <button className="hamburger-btn" onClick={() => setIsOpen(true)}>
                     <Menu size={24} />
                 </button>
-                <span className="mobile-title">Exam Panic Mode</span>
+                <span className="mobile-title">VIT Dilemma</span>
             </div>
 
             {/* Overlay */}
@@ -58,7 +58,7 @@ const Sidebar = () => {
             <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <div className="sidebar-header">
                     <div className="logo">
-                        <span className="logo-text">Exam Panic Mode</span>
+                        <span className="logo-text">VIT Dilemma</span>
                     </div>
                     <button className="close-btn" onClick={() => setIsOpen(false)}>
                         <X size={20} />
