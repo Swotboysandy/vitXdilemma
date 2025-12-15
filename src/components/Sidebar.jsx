@@ -1,6 +1,6 @@
 // Sidebar Component with Mobile Hamburger Menu
 import { NavLink } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
     Home, BookOpen, Brain, Code, BarChart3, Globe,
     FileQuestion, Layers, Calendar, BookMarked, Moon, Sun, Menu, X
@@ -35,8 +35,8 @@ const Sidebar = () => {
         <>
             {/* Mobile Header Bar */}
             <div className="mobile-header">
-                <button className="hamburger-btn" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                <button className="hamburger-btn" onClick={() => setIsOpen(true)}>
+                    <Menu size={24} />
                 </button>
                 <span className="mobile-title">Exam Panic Mode</span>
             </div>
@@ -55,12 +55,7 @@ const Sidebar = () => {
             </AnimatePresence>
 
             {/* Sidebar */}
-            <motion.aside
-                className={`sidebar ${isOpen ? 'open' : ''}`}
-                initial={{ x: -280 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.5, ease: 'easeOut' }}
-            >
+            <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
                 <div className="sidebar-header">
                     <div className="logo">
                         <span className="logo-text">Exam Panic Mode</span>
@@ -110,7 +105,7 @@ const Sidebar = () => {
                         <Moon size={16} />
                     </div>
                 </div>
-            </motion.aside>
+            </aside>
         </>
     );
 };
