@@ -1,0 +1,247 @@
+/* Study Page Styles */
+.study-page {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #888888;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.week-badge {
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.study-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+}
+
+.study-subtitle {
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* Sections */
+.study-section {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-header svg {
+    opacity: 0.6;
+}
+
+/* Key Points */
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-points li {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.key-points li:last-child {
+    border-bottom: none;
+}
+
+.bullet {
+    color: #555555;
+    font-weight: bold;
+}
+
+/* Concepts Grid */
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.concept-card {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.concept-term {
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.concept-def {
+    font-size: 13px;
+    color: #888888;
+    line-height: 1.5;
+}
+
+/* Code Block */
+.code-block {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+}
+
+.code-block code {
+    white-space: pre;
+}
+
+/* Tip Box */
+.tip-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.tip-box svg {
+    flex-shrink: 0;
+    color: #ffffff;
+    margin-top: 2px;
+}
+
+.tip-box strong {
+    color: #ffffff;
+}
+
+/* Navigation */
+.study-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #888888;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-btn.quiz {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+}
+
+.nav-btn.quiz:hover {
+    background: #e5e5e5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .study-page {
+        padding: 20px;
+    }
+
+    .study-title {
+        font-size: 24px;
+    }
+
+    .concepts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .study-navigation {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

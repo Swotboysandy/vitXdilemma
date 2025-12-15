@@ -41,6 +41,7 @@ const Subject = () => {
                                     className="topic-btn study"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
+                                    onClick={() => navigate(`/study/${subjectId}/${topic.week}`)}
                                 >
                                     <BookOpen size={16} /> Study
                                 </motion.button>

@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import GitHubBanner from './components/GitHubBanner';
 import Dashboard from './pages/Dashboard';
 import Subject from './pages/Subject';
+import Study from './pages/Study';
 import Quiz from './pages/Quiz';
 import Flashcards from './pages/Flashcards';
 import Revision from './pages/Revision';
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/subject/:subjectId" element={<Subject />} />
+            <Route path="/study/:subjectId/:weekId" element={<Study />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/planner" element={<Dashboard />} />
