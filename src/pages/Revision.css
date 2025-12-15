@@ -1,0 +1,137 @@
+/* Revision Page Styles - Black & White */
+.revision-page {
+    padding: 30px;
+}
+
+.revision-page h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.revision-page .subtitle {
+    color: #666666;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.revision-section {
+    background: #0a0a0a;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.revision-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.revision-section h2 svg {
+    color: #666666;
+}
+
+/* Formula Grid */
+.formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.formula-card {
+    background: #111111;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.formula-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #888888;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formula-content {
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size: 13px;
+    background: #0a0a0a;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Tips List */
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px;
+    background: #111111;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tip-icon {
+    font-size: 20px;
+    filter: grayscale(100%);
+}
+
+.tip-content {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.tip-content strong {
+    color: #ffffff;
+}
+
+/* Ports Grid */
+.ports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.port-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 18px;
+    background: #111111;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+}
+
+.port-service {
+    font-weight: 500;
+    font-size: 11px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.port-number {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+}
