@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* Monochrome Palette */
-  --primary: #ffffff;
-  --primary-dark: #e5e5e5;
-  --primary-light: #f5f5f5;
+  /* Dark Violet Accent Theme (Black Backgrounds) */
+  --primary: #b19eef;
+  --primary-dark: #9a86d4;
+  --primary-light: #c8bbf5;
   --secondary: #888888;
-  --accent: #cccccc;
+  --accent: #b19eef;
 
-  /* Pure Black & White */
+  /* Revert to Pure Black & White Backgrounds */
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-card: #111111;
@@ -19,11 +19,16 @@
   --text-secondary: #aaaaaa;
   --text-muted: #666666;
 
+  --heading-color: #b19eef;
+
   --success: #ffffff;
   --warning: #cccccc;
   --error: #888888;
 
-  /* No color gradients - just blacks and whites */
+  /* Keep Violet Gradients for special elements if needed, or revert? 
+     User said "rever the backgroudn aprt". I will revert gradients to monochrome 
+     unless they are text gradients. Let's make them monochrome to be safe 
+     and only pop the text color. */
   --gradient-purple: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
   --gradient-blue: linear-gradient(135deg, #2a2a2a 0%, #151515 100%);
   --gradient-green: linear-gradient(135deg, #252525 0%, #101010 100%);
@@ -79,16 +84,16 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #030014;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: #2a1050;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444444;
+  background: #3b186b;
 }
 
 a {
@@ -141,12 +146,21 @@ select option:checked {
 }
 
 /* Override colored gradients to monochrome */
-.gradient-purple,
-.gradient-blue,
-.gradient-green,
+/* Gradients use variables now */
+.gradient-purple {
+  background: var(--gradient-purple);
+}
+
+.gradient-blue {
+  background: var(--gradient-blue);
+}
+
+.gradient-green {
+  background: var(--gradient-green);
+}
+
 .gradient-orange {
-  background: linear-gradient(135deg, #222222 0%, #111111 100%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--gradient-orange);
 }
 
 /* Heading styles */
@@ -158,6 +172,7 @@ h5,
 h6 {
   font-weight: 600;
   letter-spacing: -0.02em;
+  color: var(--heading-color);
 }
 
 /* Monospace for numbers and code */

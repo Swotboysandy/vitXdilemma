@@ -17,7 +17,7 @@
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background: #111111;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     color: #888888;
@@ -34,7 +34,7 @@
 
 .week-badge {
     padding: 8px 16px;
-    background: #ffffff;
+    background: var(--primary);
     color: #000000;
     border-radius: 20px;
     font-size: 12px;
@@ -47,7 +47,7 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: var(--heading-color);
     letter-spacing: -0.03em;
 }
 
@@ -59,7 +59,7 @@
 
 /* Sections */
 .study-section {
-    background: #0a0a0a;
+    background: var(--bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 28px;
@@ -71,7 +71,7 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--heading-color);
 }
 
 .section-header h2 {
@@ -106,7 +106,7 @@
 }
 
 .bullet {
-    color: #555555;
+    color: var(--secondary);
     font-weight: bold;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .concept-card {
-    background: #111111;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 18px;
@@ -130,7 +130,7 @@
 .concept-term {
     font-weight: 700;
     font-size: 14px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .concept-def {
@@ -141,7 +141,7 @@
 
 /* Code Block */
 .code-block {
-    background: #111111;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 20px;
@@ -163,7 +163,7 @@
     align-items: flex-start;
     gap: 14px;
     padding: 20px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    background: var(--gradient-purple);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: #cccccc;
@@ -179,7 +179,7 @@
 }
 
 .tip-box strong {
-    color: #ffffff;
+    color: var(--primary);
 }
 
 /* Navigation */
@@ -196,7 +196,7 @@
     align-items: center;
     gap: 8px;
     padding: 12px 20px;
-    background: #111111;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     color: #888888;
@@ -212,7 +212,7 @@
 }
 
 .nav-btn.quiz {
-    background: #ffffff;
+    background: var(--primary);
     color: #000000;
     border: none;
 }

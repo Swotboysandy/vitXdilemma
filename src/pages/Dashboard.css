@@ -14,7 +14,7 @@
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #ffffff;
+    color: var(--heading-color);
     letter-spacing: -0.03em;
 }
 
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #0a0a0a;
+    background: var(--bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 18px 30px;
     border-radius: 16px;
@@ -35,7 +35,7 @@
 .days-number {
     font-size: 32px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--heading-color);
     font-family: var(--font-mono);
 }
 
@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    background: #0a0a0a;
+    background: var(--bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: default;
 }
@@ -83,7 +83,7 @@
 .stat-value {
     font-size: 28px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--heading-color);
     font-family: var(--font-mono);
 }
 
@@ -95,7 +95,7 @@
 
 /* Progress Section */
 .progress-section {
-    background: #0a0a0a;
+    background: var(--bg-secondary);
     border-radius: 16px;
     padding: 28px;
     margin-bottom: 30px;
@@ -112,7 +112,7 @@
 .section-header h2 {
     font-size: 18px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--heading-color);
 }
 
 .overall-progress {
@@ -128,7 +128,7 @@
 }
 
 .progress-card {
-    background: #111111;
+    background: var(--bg-card);
     border-radius: 12px;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -138,7 +138,7 @@
 
 .progress-card:hover {
     border-color: rgba(255, 255, 255, 0.15);
-    background: #151515;
+    background: var(--bg-hover);
 }
 
 .progress-header {
@@ -151,7 +151,7 @@
 .subject-name {
     font-weight: 600;
     font-size: 13px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .progress-bar {
@@ -164,7 +164,7 @@
 
 .progress-fill {
     height: 100%;
-    background: #ffffff;
+    background: var(--primary);
     border-radius: 2px;
 }
 
@@ -183,7 +183,7 @@
 
 /* Quick Actions */
 .quick-actions {
-    background: #0a0a0a;
+    background: var(--bg-secondary);
     border-radius: 16px;
     padding: 28px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -192,7 +192,7 @@
 .quick-actions h2 {
     font-size: 18px;
     margin-bottom: 24px;
-    color: #ffffff;
+    color: var(--heading-color);
 }
 
 .action-grid {
@@ -206,7 +206,7 @@
     align-items: center;
     gap: 14px;
     padding: 20px 22px;
-    background: #111111;
+    background: var(--bg-card);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     cursor: pointer;
@@ -215,7 +215,7 @@
 }
 
 .action-card:hover {
-    background: #1a1a1a;
+    background: var(--bg-hover);
     border-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -227,7 +227,7 @@
     flex: 1;
     font-weight: 600;
     font-size: 14px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /* Tilt Card base */
