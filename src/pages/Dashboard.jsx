@@ -20,10 +20,10 @@ import './Dashboard.css';
 const Dashboard = () => {
     const navigate = useNavigate();
 
-    // Calculate days left - Exam on Jan 20, 2025
-    const examDate = new Date('2025-01-20');
+    // Calculate days left - Exam on Jan 9, 2026
+    const examDate = new Date('2026-01-09');
     const today = new Date();
-    const daysLeft = Math.ceil((examDate - today) / (1000 * 60 * 60 * 24));
+    const daysLeft = Math.max(0, Math.ceil((examDate - today) / (1000 * 60 * 60 * 24)));
 
     // Stats
     const totalQuestions = Object.values(QUIZ_DATA).reduce((sum, arr) => sum + arr.length, 0);
