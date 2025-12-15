@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SUBJECTS } from '../data/quizData';
 import { STUDY_MATERIAL } from '../data/studyMaterial';
-import { FadeUp, TiltCard, BlurText } from '../components/AnimatedComponents';
+import { FadeUp, BlurText } from '../components/AnimatedComponents';
 import { ChevronLeft, BookOpen, Lightbulb, Code, Zap, ArrowRight, ArrowLeft } from 'lucide-react';
 import './Study.css';
 
@@ -52,7 +52,7 @@ const Study = () => {
 
             {/* Key Points */}
             <FadeUp delay={0.1}>
-                <TiltCard className="study-section">
+                <div className="study-section">
                     <div className="section-header">
                         <Zap size={22} />
                         <h2>Key Points</h2>
@@ -70,12 +70,12 @@ const Study = () => {
                             </motion.li>
                         ))}
                     </ul>
-                </TiltCard>
+                </div>
             </FadeUp>
 
             {/* Concepts */}
             <FadeUp delay={0.2}>
-                <TiltCard className="study-section">
+                <div className="study-section">
                     <div className="section-header">
                         <BookOpen size={22} />
                         <h2>Key Concepts</h2>
@@ -94,12 +94,12 @@ const Study = () => {
                             </motion.div>
                         ))}
                     </div>
-                </TiltCard>
+                </div>
             </FadeUp>
 
             {/* Code Example */}
             <FadeUp delay={0.3}>
-                <TiltCard className="study-section">
+                <div className="study-section">
                     <div className="section-header">
                         <Code size={22} />
                         <h2>Example</h2>
@@ -107,18 +107,15 @@ const Study = () => {
                     <pre className="code-block">
                         <code>{material.example}</code>
                     </pre>
-                </TiltCard>
+                </div>
             </FadeUp>
 
             {/* Pro Tip */}
             <FadeUp delay={0.4}>
-                <motion.div
-                    className="tip-box"
-                    whileHover={{ scale: 1.01 }}
-                >
+                <div className="tip-box">
                     <Lightbulb size={20} />
                     <span><strong>Pro Tip:</strong> {material.tips}</span>
-                </motion.div>
+                </div>
             </FadeUp>
 
             {/* Navigation */}
