@@ -190,6 +190,40 @@ set.add(1); set.add(1); // only one 1
 HashMap<String, Integer> map = new HashMap<>();
 map.put("age", 25);`,
       tips: "ArrayList for access, LinkedList for insert/delete, HashSet for unique"
+    },
+    9: {
+      title: "Generics & Annotations",
+      keyPoints: [
+        "Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods",
+        "Provides compile-time type safety and eliminates the need for casts",
+        "Annotations provide metadata about a program that is not part of the program itself"
+      ],
+      concepts: [
+        { term: "Generic Class", def: "class Box<T> { T t; } where T is a type parameter." },
+        { term: "Wildcards", def: "<?> represents an unknown type. <? extends T> for upper bound." },
+        { term: "Annotations", def: "Starts with @. Built-in: @Override, @Deprecated, @SuppressWarnings." }
+      ],
+      example: `ArrayList<String> list = new ArrayList<>(); // String is type param
+@Override
+public String toString() { return "Box"; }`,
+      tips: "Generics = Type Safety + Reusability"
+    },
+    10: {
+      title: "I/O Streams",
+      keyPoints: [
+        "Java I/O is used to process input and produce output",
+        "Uses stream concept to make I/O faster",
+        "Byte Streams (8-bit) vs Character Streams (16-bit)",
+        "Serialization: Converting object to byte stream"
+      ],
+      concepts: [
+        { term: "InputStream", def: "Superclass of all byte input streams (e.g., FileInputStream)." },
+        { term: "BufferedReader", def: "Reads text from character-input stream, buffering characters for efficiency." },
+        { term: "Scanner", def: "Simple text scanner which can parse primitive types and strings using regex." }
+      ],
+      example: `BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+String line = reader.readLine();`,
+      tips: "Always close streams to prevent memory leaks"
     }
   },
   ai: {
@@ -329,6 +363,23 @@ Q(s,a) ← Q(s,a) + α[r + γ max Q(s',a') - Q(s,a)]
 γ = discount factor (0.9)
 r = immediate reward`,
       tips: "Q-Learning learns optimal policy through exploration"
+    },
+    7: {
+      title: "Natural Language Processing (NLP)",
+      keyPoints: [
+        "NLP: Enabling computers to understand, interpret and generate human language",
+        "Components: NLU (understanding) and NLG (generation)",
+        "Key tasks: Tokenization, Stemming, Lemmatization, POS tagging, Parsing",
+        "Word Embeddings: Representing words as vectors (Word2Vec, GloVe)"
+      ],
+      concepts: [
+        { term: "Tokenization", def: "Splitting text into individual words or tokens." },
+        { term: "Stemming", def: "Reducing words to their root form (e.g., fishing → fish)." },
+        { term: "Transformers", def: "Neural network architecture using attention mechanisms (e.g., BERT, GPT)." }
+      ],
+      example: `Tokenization: "AI is cool" → ["AI", "is", "cool"]
+Stop words removal: "The cat is on the mat" → ["cat", "mat"]`,
+      tips: "Attention is all you need for modern NLP"
     }
   },
   se: {
@@ -449,6 +500,26 @@ class Database {
     }
 }`,
       tips: "UML = Universal language for software design"
+    },
+    7: {
+      title: "Coding & Testing",
+      keyPoints: [
+        "Testing: Process of executing program with intent of finding errors",
+        "Unit Testing: Testing individual components (classes/methods)",
+        "Integration Testing: Testing how modules work together",
+        "System Testing: Testing the complete, integrated system"
+      ],
+      concepts: [
+        { term: "Black Box", def: "Functional testing without knowing internal code structure." },
+        { term: "White Box", def: "Structural testing based on internal logic and code." },
+        { term: "Regression Testing", def: "Re-testing after changes to ensure old features still work." }
+      ],
+      example: `Unit Test Example:
+@Test
+void testAddition() {
+    assertEquals(5, Calculator.add(2, 3));
+}`,
+      tips: "Test early, test often!"
     }
   },
   stats: {
@@ -540,6 +611,25 @@ H₁: μ > 50
 If p-value = 0.03 < 0.05
 Reject H₀, conclude μ > 50`,
       tips: "p < α → Reject null. Small p = Big deal!"
+    },
+    5: {
+      title: "Sampling Distributions & CLT",
+      keyPoints: [
+        "Sampling Distribution: Probability distribution of a statistic (like mean) from many samples",
+        "Central Limit Theorem (CLT): Sample means will be normally distributed if n is large (n ≥ 30)",
+        "Standard Error (SE): Standard deviation of the sampling distribution",
+        "Decreases as sample size (n) increases"
+      ],
+      concepts: [
+        { term: "CLT", def: "Sample mean distribution approaches normal as n increases, regardless of population shape." },
+        { term: "Standard Error", def: "SE = σ / √n. Measures how much sample mean varies from population mean." },
+        { term: "Point Estimate", def: "Single value (like x̄) used to estimate population parameter (μ)." }
+      ],
+      example: `If population σ = 15 and n = 25:
+SE = 15 / √25 = 15 / 5 = 3
+If n = 100:
+SE = 15 / √100 = 15 / 10 = 1.5`,
+      tips: "Larger sample = more precision (smaller SE)"
     }
   },
   networks: {
@@ -637,6 +727,25 @@ Private IP ranges:
 172.16.0.0/12
 192.168.0.0/16`,
       tips: "/24 = 256 IPs - 2 = 254 usable hosts"
+    },
+    5: {
+      title: "Network Layer - Control Plane",
+      keyPoints: [
+        "Control Plane: Handles routing logic and determines paths for packets",
+        "Routing Algorithms: Distance Vector (RIP) and Link State (OSPF)",
+        "BGP: Border Gateway Protocol - the protocol of the Internet (Inter-AS routing)",
+        "SDN: Software Defined Networking - separates control and data planes"
+      ],
+      concepts: [
+        { term: "RIP", def: "Distance Vector using hop count (max 15 hops)." },
+        { term: "OSPF", def: "Link State using Dijkstra's algorithm. More efficient for large networks." },
+        { term: "BGP", def: "Path Vector protocol used to exchange routing info between Autonomous Systems." }
+      ],
+      example: `Routing decision:
+Path A: 2 hops, 10Mbps
+Path B: 4 hops, 100Mbps
+RIP selects A, OSPF might select B based on cost/bandwidth.`,
+      tips: "Routing = finding the best path through the network"
     }
   }
 };

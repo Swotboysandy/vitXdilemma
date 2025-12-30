@@ -21,6 +21,7 @@ const Quiz = () => {
     const [answers, setAnswers] = useState([]);
     const [timeLeft, setTimeLeft] = useState(0);
     const [score, setScore] = useState(0);
+    const [showFeedback, setShowFeedback] = useState(false);
 
     const shuffle = (arr) => {
         const a = [...arr];
@@ -45,6 +46,7 @@ const Quiz = () => {
         setAnswers(new Array(selected.length).fill(null));
         setTimeLeft(config.timer * 60);
         setCurrentIndex(0);
+        setShowFeedback(false);
         setStage('quiz');
     };
 
@@ -64,20 +66,24 @@ const Quiz = () => {
     }, [stage, timeLeft]);
 
     const selectAnswer = (index) => {
+        if (showFeedback) return;
         const newAnswers = [...answers];
         newAnswers[currentIndex] = index;
         setAnswers(newAnswers);
+        setShowFeedback(true);
     };
 
     const nextQuestion = () => {
         if (currentIndex < questions.length - 1) {
             setCurrentIndex(currentIndex + 1);
+            setShowFeedback(false);
         }
     };
 
     const prevQuestion = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
+            setShowFeedback(answers[currentIndex - 1] !== null);
         }
     };
 
@@ -194,16 +200,19 @@ const Quiz = () => {
                                 {questions[currentIndex].options.map((opt, i) => (
                                     <motion.div
                                         key={i}
-                                        className={`option-item ${answers[currentIndex] === i ? 'selected' : ''}`}
+                                        className={`option-item ${answers[currentIndex] === i ? 'selected' : ''} ${showFeedback && i === questions[currentIndex].answer ? 'correct' : ''} ${showFeedback && answers[currentIndex] === i && i !== questions[currentIndex].answer ? 'wrong' : ''}`}
                                         onClick={() => selectAnswer(i)}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
-                                        whileHover={{ scale: 1.02, x: 5 }}
-                                        whileTap={{ scale: 0.98 }}
+                                        whileHover={!showFeedback ? { scale: 1.02, x: 5 } : {}}
+                                        whileTap={!showFeedback ? { scale: 0.98 } : {}}
+                                        style={{ cursor: showFeedback ? 'default' : 'pointer' }}
                                     >
                                         <span className="option-letter">{String.fromCharCode(65 + i)}</span>
                                         <span className="option-text">{opt}</span>
+                                        {showFeedback && i === questions[currentIndex].answer && <CheckCircle size={18} className="feedback-icon correct" />}
+                                        {showFeedback && answers[currentIndex] === i && i !== questions[currentIndex].answer && <XCircle size={18} className="feedback-icon wrong" />}
                                     </motion.div>
                                 ))}
                             </div>

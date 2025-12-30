@@ -148,7 +148,12 @@ export const QUIZ_DATA = {
     { q: "NIO stands for:", options: ["New I/O", "Network I/O", "Native I/O", "Null I/O"], answer: 0 },
     { q: "BufferedReader improves:", options: ["Memory", "Speed", "Security", "Type safety"], answer: 1 },
     { q: "Socket is for:", options: ["File I/O", "Network communication", "Thread sync", "Memory"], answer: 1 },
-    { q: "equals() compares:", options: ["Reference", "Content", "Hash code", "Type"], answer: 1 }
+    { q: "equals() compares:", options: ["Reference", "Content", "Hash code", "Type"], answer: 1 },
+    { q: "Which class provides thread pool?", options: ["Thread", "ThreadGroup", "ExecutorService", "Process"], answer: 2 },
+    { q: "Annotation for unit testing?", options: ["@Test", "@Unit", "@Run", "@Execute"], answer: 0 },
+    { q: "JDBC Driver type 4 uses:", options: ["Native API", "ODBC", "Pure Java", "Bridge"], answer: 2 },
+    { q: "Functional interface has:", options: ["0 methods", "1 abstract method", "Many methods", "Only static"], answer: 1 },
+    { q: "JVM's Just-In-Time is:", options: ["Interpreter", "Compiler", "Debugger", "Profiler"], answer: 1 }
   ],
   ai: [
     { q: "Father of AI:", options: ["Alan Turing", "John McCarthy", "Marvin Minsky", "Herbert Simon"], answer: 1 },
@@ -200,7 +205,12 @@ export const QUIZ_DATA = {
     { q: "ROC plots:", options: ["Precision vs recall", "TPR vs FPR", "Accuracy vs loss", "Bias vs variance"], answer: 1 },
     { q: "Transformer uses:", options: ["RNN", "CNN", "Attention", "LSTM"], answer: 2 },
     { q: "GPT stands for:", options: ["General Processing", "Generative Pre-trained Transformer", "Global Pattern", "Graph Processing"], answer: 1 },
-    { q: "Deep Blue played:", options: ["Go", "Chess", "Checkers", "Poker"], answer: 1 }
+    { q: "Deep Blue played:", options: ["Go", "Chess", "Checkers", "Poker"], answer: 1 },
+    { q: "AlphaGo defeated champion in:", options: ["Chess", "Go", "Shogi", "Bridge"], answer: 1 },
+    { q: "Percept sequence is:", options: ["History", "Future", "Current only", "Random"], answer: 0 },
+    { q: "Breadth-First is optimal if:", options: ["Costs vary", "Costs equal", "Infinite depth", "Random"], answer: 1 },
+    { q: "Minimax used in:", options: ["Search", "Games", "Clustering", "Logic"], answer: 1 },
+    { q: "Stochastic process means:", options: ["Deterministic", "Random", "Linear", "Static"], answer: 1 }
   ],
   se: [
     { q: "Emphasizes risk:", options: ["Waterfall", "V-Model", "Spiral", "Prototype"], answer: 2 },
@@ -252,7 +262,12 @@ export const QUIZ_DATA = {
     { q: "Pair programming:", options: ["Solo coding", "Two programmers together", "Team coding", "No coding"], answer: 1 },
     { q: "TDD means:", options: ["Test During Dev", "Test Driven Development", "Total Dev Design", "Testing Done Daily"], answer: 1 },
     { q: "User story format:", options: ["Technical spec", "As a...I want...So that...", "Use case", "Flowchart"], answer: 1 },
-    { q: "Daily standup:", options: ["1 hour", "30 minutes", "15 minutes", "5 minutes"], answer: 2 }
+    { q: "Daily standup:", options: ["1 hour", "30 minutes", "15 minutes", "5 minutes"], answer: 2 },
+    { q: "Prototype model for:", options: ["Large project", "Unclear requirements", "Security", "Stable team"], answer: 1 },
+    { q: "Agile Manifesto year:", options: ["1995", "2001", "2010", "1980"], answer: 1 },
+    { q: "Coupling should be:", options: ["Maximum", "Minimum", "Zero", "Random"], answer: 1 },
+    { q: "White box testing is also:", options: ["Functional", "Structural", "Acceptance", "External"], answer: 1 },
+    { q: "MTBF stands for:", options: ["Mean Time Between Failures", "Mean Task", "Main Transfer", "Manual Test"], answer: 0 }
   ],
   stats: [
     { q: "Descriptive statistics:", options: ["Makes predictions", "Summarizes data", "Uses probability", "Population only"], answer: 1 },
@@ -304,7 +319,12 @@ export const QUIZ_DATA = {
     { q: "SRS means:", options: ["Biased", "Each has equal chance", "Stratified", "Clustered"], answer: 1 },
     { q: "Stratified sampling:", options: ["Random", "Divides into groups", "Takes clusters", "Systematic"], answer: 1 },
     { q: "Outlier is:", options: ["Average", "Extreme value", "Mode", "Median"], answer: 1 },
-    { q: "Lower AIC means:", options: ["Worse model", "Better model", "Same", "No difference"], answer: 1 }
+    { q: "Lower AIC means:", options: ["Worse model", "Better model", "Same", "No difference"], answer: 1 },
+    { q: "R-squared value range:", options: ["-1 to 1", "0 to 1", "-∞ to ∞", "0 to 100"], answer: 1 },
+    { q: "ANOVA F-ratio:", options: ["Mean/SD", "Between/Within variance", "Sum of squares", "Median ratio"], answer: 1 },
+    { q: "Standard Normal mean:", options: ["0", "1", "100", "μ"], answer: 0 },
+    { q: "P-value is Area in:", options: ["Center", "Tails", "Whole curve", "Random"], answer: 1 },
+    { q: "Correlation is NOT:", options: ["Linear association", "Causation", "Strength", "Direction"], answer: 1 }
   ],
   networks: [
     { q: "OSI layers:", options: ["4", "5", "6", "7"], answer: 3 },
@@ -356,7 +376,12 @@ export const QUIZ_DATA = {
     { q: "Default gateway:", options: ["DNS", "First-hop router", "DHCP", "Web server"], answer: 1 },
     { q: "Trunk port carries:", options: ["One VLAN", "Multiple VLANs", "No VLANs", "Data only"], answer: 1 },
     { q: "WiFi 6 is:", options: ["802.11n", "802.11ac", "802.11ax", "802.11be"], answer: 2 },
-    { q: "RSTP convergence:", options: ["50 seconds", "1-2 seconds", "No change", "Minutes"], answer: 1 }
+    { q: "RSTP convergence:", options: ["50 seconds", "1-2 seconds", "No change", "Minutes"], answer: 1 },
+    { q: "TCP Window size for:", options: ["Security", "Flow control", "Routing", "Encryption"], answer: 1 },
+    { q: "IPSec provides security at:", options: ["Physical", "Data Link", "Network", "Transport"], answer: 2 },
+    { q: "BGP uses Port:", options: ["80", "110", "179", "443"], answer: 2 },
+    { q: "Wireless 5GHz vs 2.4GHz:", options: ["More range", "More speed", "Same", "No interference"], answer: 1 },
+    { q: "DHCP Port (Server):", options: ["53", "67", "68", "80"], answer: 1 }
   ]
 };
 
